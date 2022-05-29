@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -33,7 +34,10 @@ class MainDrawer extends StatelessWidget {
                   fontSize: 24,
                   fontWeight: FontWeight.bold),
             ),
-            onTap: null,
+            onTap: () {
+              print('fsdfsdf');
+              Navigator.of(context).pushReplacementNamed('/');
+            },
           ),
           ListTile(
             leading: Icon(Icons.settings, size: 26),
@@ -44,7 +48,9 @@ class MainDrawer extends StatelessWidget {
                   fontSize: 24,
                   fontWeight: FontWeight.bold),
             ),
-            onTap: null,
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed('/filters');
+            },
           ),
         ],
       ),
